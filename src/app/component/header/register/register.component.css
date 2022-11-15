@@ -1,0 +1,57 @@
+.register{
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(255, 255, 255);
+    /* color: white; */
+    /* margin: 50px auto; */
+    /* margin-top: 20px; */
+    padding:60px 45px;
+    border-radius: 20px;
+    z-index: 5;
+    /* background-image: url('regbg.jpg'); */
+}
+
+.register_can{
+    padding: 50px;
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('regbg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.register_can::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .2;
+
+}
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-label{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.form_btn{
+    width: 90%;
+}
+.form_carry{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.form_carry .container{
+    width: 40%;
+}

@@ -1,0 +1,277 @@
+<div class="container-fluid register_can">
+  <div class="register">
+    <form [formGroup]="SignupForm" (ngSubmit)="submit()">
+      <h1 class="text-success" style="text-align: center;">SIGN UP</h1>
+      <div class="form_carry">
+        <div class="container">
+          <div class="mb-3">
+            <label for="Student Name" class="form-label">Student Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="Student_Name"
+              aria-describedby="emailHelp"
+              formControlName="Student_Name"
+            />
+            <div
+              class="form-text text-danger"
+              *ngIf="studentName.errors?.['required'] && studentName.touched"
+            >
+              Student Name is required
+            </div>
+            <div
+              class="form-text text-danger"
+              *ngIf="studentName.errors?.['minlength'] && studentName.touched"
+            >
+              Student Name is too short
+            </div>
+            <div class="mb-3">
+              <label for="Father Name" class="form-label">Father Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="Father_Name"
+                aria-describedby="emailHelp"
+                formControlName="Father_Name"
+              />
+              <div
+                class="form-text text-danger"
+                *ngIf="fatherName.errors?.['required'] && fatherName.touched"
+              >
+                Father Name is required
+              </div>
+              <div
+                class="form-text text-danger"
+                *ngIf="fatherName.errors?.['minlength'] && fatherName.touched"
+              >
+                Father Name is too short
+              </div>
+            </div>
+          </div>
+  
+          <div class="mb-3">
+            <label for="Gender" class="form-label">Gender:</label><br />
+    
+            <input
+              type="radio"
+              id="true"
+              value="Male"
+              name="Gender"
+              formControlName="Gender"
+            />
+            <label for="">Male</label>
+            <input
+              type="radio"
+              id="false"
+              value="Female"
+              name="Gender"
+              formControlName="Gender"
+            />
+            <label for="">Female</label>
+          </div>
+  
+  
+          <div class="mb-3 ">
+            <label for="Father Name" class="form-label">Role</label><br>
+            <input
+              type="radio"
+              id="true"
+              [value]="true"
+              name="IsStudent"
+              formControlName="IsStudent"
+            />
+            <label for="">Student</label>
+            <input
+              type="radio"
+              id="false"
+              [value]="false"
+              name="IsStudent"
+              formControlName="IsStudent"
+            />
+            <label for="">Employee</label>
+          </div>
+  
+          <div class="mb-3">
+            <label for="DOB" class="form-label">Date of Birth</label>
+            <input
+              type="date"
+              class="form-control"
+              id="DOB"
+              aria-describedby="emailHelp"
+              formControlName="DOB"
+            />
+          </div>
+  
+          <div class="mb-3">
+            <label for="CNIC" class="form-label">CNIC</label>
+            <input
+              type="number"
+              class="form-control"
+              id="CNIC"
+              aria-describedby="emailHelp"
+              formControlName="CNIC"
+            />
+            <!-- <div
+              class="form-text text-danger"
+              *ngIf="cnic.errors?.['required'] && cnic.touched"
+            >
+              CNIC is required
+            </div>
+            <div
+              class="form-text text-danger"
+              *ngIf="cnic.errors?.['minlength'] && cnic.touched"
+            >
+              CNIC is too short
+            </div> -->
+          </div>
+  
+  
+        </div>
+        <div class="container">
+  
+          <div class="mb-3">
+            <label for="Contact" class="form-label">Contact 1</label>
+            <input
+              type="tel"
+              class="form-control"
+              id="Contact 1"
+              aria-describedby="emailHelp"
+              formControlName="Contact_1"
+            />
+            <div
+              class="form-text text-danger"
+              *ngIf="contact1.errors?.['required'] && contact1.touched"
+            >
+              Contact is required
+            </div>
+            <div
+              class="form-text text-danger"
+              *ngIf="contact1.errors?.['minlength'] && contact1.touched"
+            >
+              Contact is too short
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="Contact 2" class="form-label">Contact 2</label>
+            <input
+              type="tel"
+              class="form-control"
+              id="Contact 2"
+              aria-describedby="emailHelp"
+              formControlName="Contact_2"
+            />
+            <div
+              class="form-text text-danger"
+              *ngIf="contact2.errors?.['required'] && contact2.touched"
+            >
+              Contact are required
+            </div>
+            <div
+              class="form-text text-danger"
+              *ngIf="contact2.errors?.['minlength'] && contact2.touched"
+            >
+              Contact is too short
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="District" class="form-label">District</label>
+            <input
+              type="text"
+              class="form-control"
+              id="District"
+              aria-describedby="emailHelp"
+              formControlName="District"
+            />
+            <div
+              class="form-text text-danger"
+              *ngIf="district.errors?.['required'] && district.touched"
+            >
+              District is required
+            </div>
+            <div
+              class="form-text text-danger"
+              *ngIf="district.errors?.['minlength'] && district.touched"
+            >
+              District is too short
+            </div>
+          </div>
+    
+          <div class="mb-3">
+            <label for="Registration No." class="form-label"
+              >Registration No.</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="Registration No."
+              aria-describedby="emailHelp"
+              formControlName="Registration_No"
+            />   
+    
+           
+          </div>
+    
+          <div class="mb-3">
+            <label for="Email" class="form-label">Personal Email</label>
+            <input
+              type="email"
+              class="form-control"
+              id="Email"
+              aria-describedby="emailHelp"
+              formControlName="Email"
+            />
+            <div
+              class="form-text text-danger"
+              *ngIf="email.errors?.['required'] && email.touched"
+            >
+              Email must be required
+            </div>
+            <div
+              class="form-text text-danger"
+              *ngIf="email.errors?.['email'] && email.touched"
+            >
+              Invalid email
+            </div>
+          </div>
+    
+          <div class="mb-3">
+            <label for="Password" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="Password"
+              aria-describedby="emailHelp"
+              formControlName="Password"
+            />
+            <div
+              class="form-text text-danger"
+              *ngIf="password.errors?.['required'] && password.touched"
+            >
+              Password must be required.
+            </div>
+            <div
+              class="form-text text-danger"
+              *ngIf="password.errors?.['minlength'] && password.touched"
+            >
+              Password is too short.
+            </div>
+          </div>
+          </div>
+  
+          
+     </div>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <button type="submit" class="btn btn-success form_btn " style="margin: 0 auto;">Submit</button>
+      <div class="mt-2" >Do you have account? <a href="user/login">login</a></div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,55 @@
+.sur_form{
+    width: 80%;
+    margin: 0 auto;
+
+}
+.head{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border: 2px solid black;
+    padding: 5px 10px;
+}
+.cantainer_heading{
+    width: 60%;
+}
+.cantainer_header{
+    width: 40%;
+}
+.cantainer_header ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+.cantainer_header ul li{
+    margin-left: 44px;
+
+}
+.questions{
+    border: 2px solid black;
+}
+.question{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+.answer{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* .answer .ans_input{
+    margin: 0 0 0 20px;
+} */
+.label{
+    width: 70%;
+}
+
+.btn1{
+    float:right;
+}

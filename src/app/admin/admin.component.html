@@ -1,0 +1,92 @@
+<ul class="tab-wrap">
+  <li>
+    <input type="radio" id="tab-1" name="tab" checked />
+    <label for="tab-1"> Requests </label>
+    <div class="tab-content">
+      <h2>User Requests</h2>
+
+      <table class="table table-dark table-striped">
+        <thead>
+          <tr>
+            <th scope="col">User Id</th>
+            <th scope="col">Student Name</th>
+            <th scope="col">Father Name</th>
+            <th scope="col">Gender</th>
+
+            <th scope="col">CNIC</th>
+
+            <th scope="col">Email</th>
+            
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let student of Students">
+          <tr>
+            <th scope="row">{{ student.UserId }}</th>
+            <td>{{ student.Student_Name }}</td>
+            <td>{{ student.Father_Name }}</td>
+            <td>{{ student.Gender }}</td>
+
+            <td>{{ student.CNIC }}</td>
+
+            <td>{{ student.Email }}</td>
+           
+        
+            <td>
+          
+                <div class="mb-3">
+                  <button
+                    class="btn btn-success mx-2"
+                    id={{student.UserId}}
+                   
+                    (click)="Accepted($event)"
+                    [value]="true"
+                   
+                  >
+                    Accept
+                  </button>
+                  <button
+                    class="btn btn-danger"
+                    id={{student.UserId}}
+                   
+                    value="false"
+                   
+                  >
+                    Decline
+                  </button>
+                </div>
+              
+            </td>
+            
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </li>
+  <li>
+    <input type="radio" id="tab-2" name="tab" />
+    <label for="tab-2"> Response </label>
+    <div class="tab-content">
+      <h2>Survey Responses</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, culpa
+        molestias delectus incidunt cum sed impedit aperiam aspernatur aliquam
+        eos. Provident velit minus quia ea amet. Reprehenderit, voluptatem,
+        explicabo. Consequuntur.
+      </p>
+    </div>
+  </li>
+  <li>
+    <input type="radio" id="tab-3" name="tab" />
+    <label for="tab-3"> Report </label>
+    <div class="tab-content">
+      <h2>Survey Question Report</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, culpa
+        molestias delectus incidunt cum sed impedit aperiam aspernatur aliquam
+        eos. Provident velit minus quia ea amet. Reprehenderit, voluptatem,
+        explicabo. Consequuntur.
+      </p>
+    </div>
+  </li>
+</ul>

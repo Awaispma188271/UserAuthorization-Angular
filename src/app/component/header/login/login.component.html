@@ -1,0 +1,31 @@
+
+<div class="container-fluid main">
+    <div class="login">
+    <form [formGroup]="LoginForm" (ngSubmit)="submit()" >
+        <h1 class="form_header text-success">LOG IN</h1>
+        <div class="mb-3">
+          <label for="UserName" class="form-label">Email</label>
+          <input type="text" class="form-control" id="Email" aria-describedby="emailHelp" formControlName="Email">
+          <div class="form-text text-danger" *ngIf="email.errors?.['required'] && email.touched">
+            Email must be required
+        </div>
+        <div class="form-text text-danger" *ngIf="email.errors?.['email'] && email.touched">
+            Invalid email
+        </div>
+        </div>
+        <div class="mb-3">
+            <label for="Password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="Password" aria-describedby="emailHelp" formControlName="Password">
+            <div class="form-text text-danger" *ngIf="password.errors?.['required'] && password.touched">
+                Password must be required.
+            </div>
+            <div class="form-text text-danger" *ngIf="password.errors?.['minlength'] && password.touched">
+                Password is too short.
+            </div>
+          </div>
+          
+          <button type="submit" class="btn btn-success form_btn mt-2" [disabled]="!LoginForm.valid" >Submit</button>
+          <div class="mt-2">Do not have account? <a href="user/register">Create</a></div>
+        </form>
+    </div>
+        </div>
